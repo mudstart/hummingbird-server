@@ -1353,6 +1353,13 @@ ActiveRecord::Schema.define(version: 20170616053125) do
     t.integer  "rating_system",                           default: 0,           null: false
     t.integer  "theme",                                   default: 0,           null: false
     t.datetime "deleted_at"
+<<<<<<< 69d81f89460493f77013f0d687f8ea35a8455390
+=======
+    t.boolean  "never_signed_in_email_sent",              default: false,       null: false
+    t.boolean  "first_inactive_email_sent",               default: false,       null: false
+    t.boolean  "second_inactive_email_sent",              default: false,       null: false
+    t.boolean  "third_inactive_email_sent",               default: false,       null: false
+>>>>>>> adding functionaltiy for sending types of emails, sans mentions
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
