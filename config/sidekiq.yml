@@ -16,3 +16,11 @@ production:
     every: 12h
   LibraryEntryLogRemovalWorker:
     every: 12h
+  UserEngagementMinuteWorker:
+    every: 15m
+  UserEngagementHourWorker:
+    every: 1h
+  UserEngagementHourlyWorker:
+    every: 6h
+  UserEngagementDailyWorker:
+    every: 24h
