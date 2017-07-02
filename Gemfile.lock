@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/nuckchorris/rack-timeout.git
-  revision: 7da9a402be1c56fa079e68793415f7fae75473e4
+  revision: 35a02dfafe8312bbe67a2e870252c0a80d9ced29
   specs:
     rack-timeout (0.4.2)
 
