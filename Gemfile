@@ -54,6 +54,7 @@ gem 'lograge' # Non-shitty logging
 gem 'mechanize' # Automating interaction with websites
 gem 'nokogiri', '~> 1.7.1' # Parse MAL XML shit
 gem 'paranoia', '~> 2.0' # Faux deletion
+gem 'rack-timeout', github: 'nuckchorris/rack-timeout'
 gem 'ruby-progressbar' # Fancy progress bars for Rake tasks
 gem 'sitemap_generator' # Generate Sitemaps
 gem 'stream-ruby', '~> 2.5.4' # Feeds
