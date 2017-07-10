@@ -22,6 +22,8 @@ class MediaFollow < ActiveRecord::Base
 
   validates :media, polymorphism: { type: Media }
 
+  scope :for_library_entry, ->(le) { where(media: le.media, user: le.user) }
+
   after_create do
     user.timeline.follow(media.feed)
   end
