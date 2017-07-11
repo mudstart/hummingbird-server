@@ -169,7 +169,7 @@ end
 
 # == Route Map
 #
-# I, [2017-07-05T23:12:24.125153 #33025]  INFO -- : Raven 2.4.0 configured not to capture errors: DSN not set
+# I, [2017-07-10T21:50:08.085451 #56463]  INFO -- : Raven 2.4.0 configured not to capture errors: DSN not set
 #                                                     Prefix Verb      URI Pattern                                                                                                Controller#Action
 #                                   user_relationships_waifu GET       /api/edge/users/:user_id/relationships/waifu(.:format)                                                     users#show_relationship {:relationship=>"waifu"}
 #                                                            PUT|PATCH /api/edge/users/:user_id/relationships/waifu(.:format)                                                     users#update_relationship {:relationship=>"waifu"}
@@ -481,6 +481,14 @@ end
 #                                                            PATCH     /api/edge/amas/:id(.:format)                                                                               amas#update
 #                                                            PUT       /api/edge/amas/:id(.:format)                                                                               amas#update
 #                                                            DELETE    /api/edge/amas/:id(.:format)                                                                               amas#destroy
+#                          ama_subscriber_relationships_user GET       /api/edge/ama-subscribers/:ama_subscriber_id/relationships/user(.:format)                                  ama_subscribers#show_relationship {:relationship=>"user"}
+#                                                            PUT|PATCH /api/edge/ama-subscribers/:ama_subscriber_id/relationships/user(.:format)                                  ama_subscribers#update_relationship {:relationship=>"user"}
+#                                                            DELETE    /api/edge/ama-subscribers/:ama_subscriber_id/relationships/user(.:format)                                  ama_subscribers#destroy_relationship {:relationship=>"user"}
+#                                        ama_subscriber_user GET       /api/edge/ama-subscribers/:ama_subscriber_id/user(.:format)                                                users#get_related_resource {:relationship=>"user", :source=>"ama_subscribers"}
+#                           ama_subscriber_relationships_AMA GET       /api/edge/ama-subscribers/:ama_subscriber_id/relationships/AMA(.:format)                                   ama_subscribers#show_relationship {:relationship=>"AMA"}
+#                                                            PUT|PATCH /api/edge/ama-subscribers/:ama_subscriber_id/relationships/AMA(.:format)                                   ama_subscribers#update_relationship {:relationship=>"AMA"}
+#                                                            DELETE    /api/edge/ama-subscribers/:ama_subscriber_id/relationships/AMA(.:format)                                   ama_subscribers#destroy_relationship {:relationship=>"AMA"}
+#                                         ama_subscriber_AMA GET       /api/edge/ama-subscribers/:ama_subscriber_id/AMA(.:format)                                                 amas#get_related_resource {:relationship=>"AMA", :source=>"ama_subscribers"}
 #                                            ama_subscribers GET       /api/edge/ama-subscribers(.:format)                                                                        ama_subscribers#index
 #                                                            POST      /api/edge/ama-subscribers(.:format)                                                                        ama_subscribers#create
 #                                             ama_subscriber GET       /api/edge/ama-subscribers/:id(.:format)                                                                    ama_subscribers#show
