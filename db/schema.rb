@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170705063149) do
+ActiveRecord::Schema.define(version: 20170705053245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1120,10 +1120,8 @@ ActiveRecord::Schema.define(version: 20170705063149) do
     t.integer  "comments_count",           default: 0,     null: false
     t.integer  "top_level_comments_count", default: 0,     null: false
     t.datetime "edited_at"
-    t.integer  "ama_id"
   end
 
-  add_index "posts", ["ama_id"], name: "index_posts_on_ama_id", using: :btree
   add_index "posts", ["deleted_at"], name: "index_posts_on_deleted_at", using: :btree
 
   create_table "pro_membership_plans", force: :cascade do |t|
@@ -1544,7 +1542,6 @@ ActiveRecord::Schema.define(version: 20170705063149) do
   add_foreign_key "one_signal_players", "users"
   add_foreign_key "post_follows", "posts"
   add_foreign_key "post_follows", "users"
-  add_foreign_key "posts", "amas"
   add_foreign_key "posts", "users"
   add_foreign_key "posts", "users", column: "target_user_id"
   add_foreign_key "profile_links", "profile_link_sites"
